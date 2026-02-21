@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+  xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
+  <style>
+
+    body {
+      min-width: 375px !important;
+    }
+
+    /* Outlook(.com) dark mode: manter cores originais */
+    [data-ogsc] .force-light,
+    [data-ogsc] .force-light td,
+    [data-ogsb] .force-light,
+    [data-ogsb] .force-light td {
+      background-image: url('bg.png') !important;
+      background-repeat: repeat;
+    }
+    
+
+    [data-ogsc] .force-footer,
+    [data-ogsb] .force-footer {
+      background-color: #3A2543 !important;
+    }
+
+    table,
+    td {
+      mso-table-lspace: 0pt !important;
+      mso-table-rspace: 0pt !important;
+      border-collapse: collapse !important;
+    }
+
+    img {
+      -ms-interpolation-mode: bicubic;
+      border: 0;
+      height: auto;
+      line-height: 100%;
+      outline: none;
+      text-decoration: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    #outlook a {
+      padding: 0;
+    }
+
+    .ReadMsgBody,
+    .ExternalClass {
+      width: 100%;
+    }
+
+    .ExternalClass,
+    .ExternalClass p,
+    .ExternalClass span,
+    .ExternalClass font,
+    .ExternalClass td,
+    .ExternalClass div {
+      line-height: 100%;
+    }
+
+    /* Botão à prova de Outlook */
+    .button-td,
+    .button-a {
+      transition: all 100ms ease-in;
+    }
+
+    .button-a:hover {
+      background: #e85a69 !important;
+      border-color: #e85a69 !important;
+    }
+
+    /* Media Queries para Responsividade */
+    @media screen and (max-width: 600px) {
+      .email-container {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
+      .fluid {
+        max-width: 100% !important;
+        height: auto !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
+      .stack-column,
+      .stack-column-center {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        direction: ltr !important;
+      }
+
+      /* Keep logo + "convida:" + line on one row */
+      .no-stack .stack-column-center,
+      .no-stack .no-stack-cell {
+        display: table-cell !important;
+        width: auto !important;
+        max-width: none !important;
+        text-align: left !important;
+        vertical-align: middle !important;
+      }
+      .no-stack .line-cell {
+        width: 100% !important;
+      }
+      .no-stack .logo-img {
+        width: 80px !important;
+        max-width: 80px !important;
+        height: auto !important;
+      }
+      .no-stack .mobile-center {
+        text-align: left !important;
+      }
+
+      /* Header (mobile): keep logo + "convida:" + line on one row */
+      .header-inline .stack-column-center {
+        display: table-cell !important;
+        width: auto !important;
+        max-width: none !important;
+        text-align: left !important;
+        vertical-align: middle !important;
+      }
+      .header-inline .convida-cell { display: table-cell !important; }
+      .header-inline .logo-cell { padding-right: 8px !important; }
+      .header-inline .convida-cell { padding-left: 8px !important; padding-right: 8px !important; }
+      .header-inline .convida-cell span { white-space: nowrap !important; display: inline-block !important; font-size: 16px !important; }
+      .header-inline .logo-img {
+        width: 80px !important;
+        max-width: 80px !important;
+        height: auto !important;
+      }
+      .header-inline .line-cell { width: 100% !important; height: 2px !important; position: relative; top: 5px;}
+      .header-inline .line-cell-parent { padding-left: 8px !important; }
+      .header-inline .mobile-show { display: none !important; }
+
+      .mobile-padding {
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+      }
+
+      .mobile-padding-sm {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+      }
+
+      .mobile-center {
+        text-align: center !important;
+      }
+
+      .mobile-hide {
+        display: none !important;
+      }
+
+      .mobile-show {
+        display: block !important;
+        max-height: none !important;
+      }
+
+      .headline-mobile {
+        font-size: 32px !important;
+        line-height: 1.2 !important;
+      }
+
+      .subheadline-mobile {
+        font-size: 24px !important;
+        line-height: 1.2 !important;
+      }
+
+      .text-mobile {
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+      }
+
+      .text-mobile-sm {
+        font-size: 14px !important;
+        line-height: 1.4 !important;
+      }
+
+      .cta-mobile {
+        font-size: 16px !important;
+        padding: 16px 24px !important;
+        text-align: center;
+      }
+
+      .circle-section {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100% !important;
+        padding: 40px 25px !important;
+        border-radius: 50% !important;
+      }
+
+      .circle-headline {
+        font-size: 24px !important;
+      }
+
+      .circle-text {
+        font-size: 14px !important;
+      }
+
+      .benefit-text {
+        font-size: 16px !important;
+      }
+
+      .qr-code {
+        width: 200px !important;
+        height: 200px !important;
+      }
+
+      .logo-img {
+        width: 100px !important;
+        height: auto !important;
+      }
+
+      .partner-logo {
+        width: 200px !important;
+        height: auto !important;
+      }
+
+      .footer-text {
+        font-size: 18px !important;
+      }
+      /* Manter "VI Media" e "vimedia.com.br" na mesma linha no mobile */
+      .no-stack-footer .stack-column-center {
+        text-align: center !important;
+      }
+      .no-stack-footer a {
+        white-space: nowrap !important;
+      }
+        .central {
+        padding: 0 !important;
+        text-align: center !important;
+        padding-top: 15px !important;
+        } 
+    }
+
+     
+    /* Gmail apps (iOS/Android) – hack via <u> marker e wrapper .body */
+    u + .body .force-light {
+      background-color: #4c384e !important;
+        background-image: url('bg.png') !important;
+      background-repeat: repeat !important;
+      background-size: auto !important;
+      color: #ffffff !important;
+    }
+    /* Ensure nested cells keep intended background color in Gmail dark mode */
+    u + .body .force-light table,
+    u + .body .force-light tr,
+     {
+      background-color: #3A2543 !important;
+    }
+    
+    u + .body .force-footer {
+      background-color: #3A2543 !important;
+    }
+    u + .body .force-footer table, {
+      background-color: #3A2543 !important;
+    }
+
+     u + .body .force-footer td { 
+          background-color: #ff8985 !important;
+     }
+
+
+    /* Clientes que respeitam prefers-color-scheme */
+    @media (prefers-color-scheme: dark) {
+      .force-light {
+        background-color: #4c384e !important;
+        background-image: url('https://mkt.letswork.com.br/media/images/bg.gif') !important;
+        background-repeat: repeat !important;
+        background-size: auto !important;
+        color: #ffffff !important;
+      }
+      .force-footer { background-color: #3A2543 !important; }
+    }
+  </style>
+</head>
+
+<body
+  style="margin: 0; padding: 0; background-color: #ffffff; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: Arial, Helvetica, sans-serif;">
+  <u></u>
+  <div class="body">
+
+  <!-- Preheader Text (texto que aparece no preview do email) -->
+  <div
+    style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all;">
+    Você foi convidado para fazer parte do VI MEDIA Partner Club - Um clube exclusivo de benefícios!
+  </div>
+
+  <!-- Wrapper Principal -->
+  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+    <tr>
+      <td align="center" style="padding: 20px 10px;">
+
+        <!-- Email Container - Max 600px para melhor compatibilidade -->
+        <table role="presentation" class="email-container force-light" cellspacing="0" cellpadding="0" border="0"
+          width="100%"
+          style="max-width: 600px; width: 100%; border-radius: 100px 0 0 0; -webkit-border-radius: 100px 0 0 0; overflow: hidden;">
+
+          <!-- ========== HEADER + HEADLINE + DESCRIÇÃO COM FUNDO TOPO ========== -->
+          <tr>
+            <td class="mobile-padding"
+              style="padding: 40px 40px 24px 40px; background-image: url('topo.png'); background-repeat: no-repeat; background-size: cover; border-radius: 100px 0 0 0; -webkit-border-radius: 100px 0 0 0;">
+              <table role="presentation" class="header-inline" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-top: 45px;">
+                <tr>
+                  <!-- Logo VI -->
+                  <td class="stack-column-center logo-cell" style="vertical-align: middle;" width="120">
+                    <a href="https://www.vimedia.com.br/" target="_blank" style="text-decoration: none;">
+                      <img class="logo-img" src="https://mkt.letswork.com.br/media/images/logo.png" alt="VI Media"
+                        width="120" style="display: block; border: 0; max-width: 120px; height: auto;">
+                    </a>
+                  </td>
+                  <!-- Texto "convida:" -->
+                  <td class="stack-column-center mobile-center central convida-cell" style="vertical-align: middle; padding-left: 16px;">
+                    <span
+                      style="color: #FF6B7A; font-size: 18px; font-weight: 700; font-family: Arial, Helvetica, sans-serif;">convida:</span>
+                  </td>
+                  <!-- Linha horizontal -->
+                  <td class="line-cell-parent" style="vertical-align: middle; padding-left: 16px; width: 100%;">
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                      <tr>
+                        <td class="line-cell" style="height: 2px; background-color: #FF6B7A; font-size: 0; line-height: 0;"> </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- Mobile-only row with "convida:" below -->
+                <tr class="mobile-show" style="display: none; max-height: 0; overflow: hidden;">
+                  <td colspan="3" class="stack-column-center mobile-center central" style="padding-top: 10px;">
+                    <span style="color: #FF6B7A; font-size: 18px; font-weight: 700; font-family: Arial, Helvetica, sans-serif;">convida:</span>
+                  </td>
+                </tr>
+              </table>
+              <!-- Headline -->
+              <h1 class="headline-mobile"
+                style="margin: 32px 0 0 0; font-size: 33px; font-weight: 900; color: #FF6B7A; line-height: 1.15; font-weight: 900; padding-top: 65px; padding-bottom: 30px;">
+                O Lollapalooza está chegando!<br>E a Vi Media pode te colocar lá.
+              </h1>
+              <!-- Descrição -->
+              <div style="margin-top: 24px;">
+                <p class="text-mobile"
+                  style="margin: 0 0 20px 0; font-size: 17px; line-height: 1.6; color: #C4B5CA; font-family: Arial, Helvetica, sans-serif; font-weight: 400;">
+                  A VI Media acaba de lançar o VI MEDIA Partner Club, um clube exclusivo para mídias de agências
+                  parceiras, com benefícios pensados para quem está junto com a gente gerando resultado real.
+                </p>
+                <p class="text-mobile"
+                  style="margin: 0; font-size: 17px; line-height: 1.6; color: #C4B5CA; font-family: Arial, Helvetica, sans-serif; font-weight: 400;">
+                  Você não entra em mais um programa de pontos. Você entra em um clube que valoriza tempo de exposição,
+                  relacionamento, conhecimento e entretenimento.
+                </p>
+              </div>
+            </td>
+          </tr>
+
+          <!-- ========== LOGO VI MEDIA PARTNER CLUB ========== -->
+          <tr>
+            <td align="center" bgcolor="#4c384e"
+                style="padding: 40px 20px; background-image: url('bg.png'); background-repeat: repeat;">
+              <img class="partner-logo" src="https://mkt.letswork.com.br/media/images/parter.png"
+                alt="VI MEDIA PARTNER CLUB" width="280"
+                style="display: block; max-width: 280px; width: 100%; height: auto;">
+            </td>
+          </tr>
+
+          <tr>
+            <td align="center" class="mobile-padding" bgcolor="#4c384e"
+                style="padding: 0 30px 50px 30px; background-image: url('bg.png'); background-repeat: repeat;">
+              <img src="circulo.png" alt="Benefícios VI MEDIA Partner Club"
+                style="display: block; max-width: 540px; width: 100%; height: auto;">
+            </td>
+          </tr>
+
+          <!-- ========== SEÇÃO DE PASSOS ========== -->
+          <tr>
+            <td class="mobile-padding" bgcolor="#4c384e"
+                style="padding: 20px 40px 30px 40px; background-image: url('bg.png'); background-repeat: repeat;">
+              <h3 class="subheadline-mobile"
+                style="margin: 0 0 20px 0; font-size: 22px; font-weight: 800; color: #FF6B7A; line-height: 1.3; font-family: Arial, Helvetica, sans-serif;">
+                Para fazer parte do VI MEDIA Partner Club agora, é só seguir estes passos:
+              </h3>
+              <div class="text-mobile" style="font-size: 17px; line-height: 1.8; color: #ffffff; font-family: Arial, Helvetica, sans-serif; font-weight: 400;">
+                Aponte a câmera do seu celular para o QR code abaixo;<br>Toque no link que aparecer na tela;<br>Fale com a nossa equipe no WhatsApp e envie: “Quero entrar no Partner Club”.
+              </div>
+            </td>
+          </tr>
+
+          <!-- ========== QR CODE ========== -->
+          <tr>
+            <td align="center" class="mobile-padding" bgcolor="#4c384e"
+                style="padding: 30px 40px 20px 40px; background-image: url('bg.png'); background-repeat: repeat;">
+              <a href="https://wa.me/5511992338632?text=Oi%20Gostaria%20de%20entrar%20no%20Partner%20Club" target="_blank" style="display: inline-block; text-decoration: none;">
+                <img class="qr-code" src="https://mkt.letswork.com.br/media/images/qrcode.png" alt="QR Code WhatsApp"
+                  width="220" height="220"
+                  style="display: block; max-width: 220px; width: 100%; height: auto; border: 3px solid #FF6B7A; border-radius: 10px;">
+              </a>
+              <p class="text-mobile-sm"
+                style="margin: 20px 0 0 0; font-size: 16px; color: #ffffff; font-family: Arial, Helvetica, sans-serif; font-weight: 500; line-height: 1.4;">
+                Aponte a câmera do seu celular para o QR code
+              </p>
+            </td>
+          </tr>
+
+          <!-- ========== BOTÃO WHATSAPP ========== -->
+          <tr>
+            <td align="center" class="mobile-padding" bgcolor="#4c384e"
+                style="padding: 30px 40px 20px 40px; background-image: url('bg.png'); background-repeat: repeat;">
+              <!-- Botão compatível com todos os clientes -->
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="button-td" style="border-radius: 50px; background: #FF6B7A;">
+                    <a class="button-a cta-mobile"
+                      href="https://wa.me/5511992338632?text=Oi%20Gostaria%20de%20entrar%20no%20Partner%20Club"
+                      target="_blank"
+                      style="background: #FF6B7A; border: 1px solid #FF6B7A; border-radius: 50px; font-family: Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 700; line-height: 1.2; text-decoration: none; padding: 18px 30px; color: #ffffff; display: block;">
+                      Clique aqui para falar pelo Whatsapp
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ========== TEXTO ALTERNATIVO ========== -->
+          <tr>
+            <td align="center" class="mobile-padding" bgcolor="#ff6273"
+                style="padding: 15px 40px 60px 40px; background-image: url('bg.png'); background-repeat: repeat;">
+              <p class="text-mobile-sm"
+                style="margin: 0; font-size: 16px; line-height: 1.5; color: #FF6B7A; font-family: Arial, Helvetica, sans-serif; font-weight: 600;">
+                Se preferir, clique no botão em <br> vez de escanear o QR code.
+              </p>
+            </td>
+          </tr>
+
+          <!-- ========== FOOTER COM MEIA ELIPSE ========== -->
+          <tr>
+            <td align="center" bgcolor="#ff6273"
+                style="padding: 0; background-image: url('bg.png'); background-repeat: repeat;">
+              <!-- Meia elipse como imagem hospedada -->
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                <tr>
+                  <td align="center" bgcolor="#ff6273"
+                      style="padding: 0; background-image: url('bg.png'); background-repeat: repeat;">
+                    <img src="footer-ellipse.png" alt="" width="600"
+                      style="display: block; width: 100%; max-width: 600px; height: auto;">
+                  </td>
+                </tr>
+              </table>
+              <!-- Conteúdo do footer -->
+        <table role="presentation" class="force-footer" cellspacing="0" cellpadding="0" border="0" width="100%"
+                style="background-image: url('https://mkt.letswork.com.br/media/images/gif'); background-repeat: repeat;">
+                <tr>
+                  <td align="center" style="padding: 20px 40px 50px 40px;">
+                    <table role="presentation" class="no-stack-footer" cellspacing="0" cellpadding="0" border="0" width="100%">
+                      <tr>
+                        <td class="footer-text stack-column-center" align="left" valign="middle"
+                          style="font-size: 20px; font-weight: 800; color: #FF6B7A; font-family: Arial, Helvetica, sans-serif;"
+                          width="50%">
+                          <a href="https://www.vimedia.com.br/" target="_blank"
+                            style="color: #FF6B7A; text-decoration: none; font-weight: 800;">VI Media</a>
+                        </td>
+                        <td class="footer-text stack-column-center" align="right" valign="middle"
+                          style="font-size: 20px; font-weight: 800; color: #FF6B7A; font-family: Arial, Helvetica, sans-serif;"
+                          width="50%">
+                          <a href="https://www.vimedia.com.br/" target="_blank"
+                            style="color: #FF6B7A; text-decoration: none; font-weight: 800;">vimedia.com.br</a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+        </table>
+        <!-- Fim Email Container -->
+
+      </td>
+    </tr>
+  </table>
+
+  </div>
+
+</body>
+
+</html>
