@@ -10,10 +10,7 @@
   <meta name="supported-color-schemes" content="light dark">
   <style>
 
-    body {
-      min-width: 375px !important;
-    }
-
+  
     /* Outlook(.com) dark mode: manter cores originais */
     [data-ogsc] .force-light,
     [data-ogsc] .force-light td,
@@ -263,8 +260,12 @@
     /* Hack para forçar fundo claro no rodapé no Gmail mobile */
     u + .body .force-footer,
     u + .body .force-footer table,
-    u + .body .force-footer td {
+    u + .body .force-footer td,
+    u + .body .no-stack-footer,
+    u + .body .no-stack-footer tr,
+    u + .body .no-stack-footer td {
       background-color: #b6f2d6 !important;
+      background: #b6f2d6 !important;
     }
 
 
@@ -277,7 +278,21 @@
         background-size: auto !important;
         color: #ffffff !important;
       }
-      .force-footer { background-color: #3A2543 !important; }
+      /* Forçar rodapé igual ao modo claro em dark mode */
+      .force-footer,
+      .force-footer table,
+      .force-footer td,
+      .no-stack-footer,
+      .no-stack-footer tr,
+      .no-stack-footer td {
+        background-color: #b6f2d6 !important;
+        background: #b6f2d6 !important;
+        color: #09af99 !important;
+      }
+      .footer-text,
+      .force-footer a {
+        color: #09af99 !important;
+      }
     }
   </style>
 </head>
@@ -441,24 +456,24 @@
           <tr>
             <td align="center" bgcolor="#b6f2d6" style="padding: 0; background-color: #b6f2d6 !important;">
               <!-- Meia elipse como imagem hospedada -->
-              <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #b6f2d6 !important;">
-                <tr>
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #b6f2d6 !important;" bgcolor="#b6f2d6">
+                <tr bgcolor="#b6f2d6" style="background-color: #b6f2d6 !important;">
                   <td align="center" bgcolor="#b6f2d6" style="padding: 0; background-color: #b6f2d6 !important;">
-                    <img src="https://vimedia-lollapalooza-partner.vercel.app/versao-azul/footer-ellipse.png" alt="" width="100%" style="display: block; width: 100%; max-width: 600px; height: auto; background-color: #b6f2d6 !important;">
+                    <img src="https://vimedia-lollapalooza-partner.vercel.app/versao-azul/footer-ellipse.png" alt="" width="100%" style="display: block; width: 100%; max-width: 600px; height: auto; background-color: #b6f2d6 !important;" bgcolor="#b6f2d6">
                   </td>
                 </tr>
               </table>
               <!-- Conteúdo do footer -->
-              <table role="presentation" class="force-footer" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #b6f2d6 !important; background-image: none !important;">
-                <tr>
-                  <td align="center" style="padding: 20px 40px 50px 40px; background-color: #b6f2d6 !important;">
-                    <table role="presentation" class="no-stack-footer" cellspacing="0" cellpadding="0" border="0" width="100%">
-                      <tr>
-                        <td class="footer-text stack-column-center" align="left" valign="middle" style="font-size: 20px; font-weight: 800; color: #09af99; font-family: Arial, Helvetica, sans-serif; background-color: #b6f2d6 !important;" width="50%">
-                          <a href="https://www.vimedia.com.br/" target="_blank" style="color: #09af99; text-decoration: none; font-weight: 800;">VI Media</a>
+              <table role="presentation" class="force-footer" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #b6f2d6 !important; background-image: none !important;" bgcolor="#b6f2d6">
+                <tr bgcolor="#b6f2d6" style="background-color: #b6f2d6 !important; background-image: none !important;">
+                  <td align="center" bgcolor="#b6f2d6" style="padding: 20px 40px 50px 40px; background-color: #b6f2d6 !important; background-image: none !important;">
+                    <table role="presentation" class="no-stack-footer" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #b6f2d6 !important; background-image: none !important;" bgcolor="#b6f2d6">
+                      <tr style="background-color: #b6f2d6 !important; background-image: none !important;" bgcolor="#b6f2d6">
+                        <td class="footer-text stack-column-center" align="left" valign="middle" bgcolor="#b6f2d6" style="font-size: 20px; font-weight: 800; color: #09af99; font-family: Arial, Helvetica, sans-serif; background-color: #b6f2d6 !important; background-image: none !important;" width="50%">
+                          <a href="https://www.vimedia.com.br/" target="_blank" style="color: #09af99; text-decoration: none; font-weight: 800; background: none !important; background-color: transparent !important;">VI Media</a>
                         </td>
-                        <td class="footer-text stack-column-center" align="right" valign="middle" style="font-size: 20px; font-weight: 800; color: #09af99; font-family: Arial, Helvetica, sans-serif; background-color: #b6f2d6 !important;" width="50%">
-                          <a href="https://www.vimedia.com.br/" target="_blank" style="color: #09af99; text-decoration: none; font-weight: 800;">vimedia.com.br</a>
+                        <td class="footer-text stack-column-center" align="right" valign="middle" bgcolor="#b6f2d6" style="font-size: 20px; font-weight: 800; color: #09af99; font-family: Arial, Helvetica, sans-serif; background-color: #b6f2d6 !important; background-image: none !important;" width="50%">
+                          <a href="https://www.vimedia.com.br/" target="_blank" style="color: #09af99; text-decoration: none; font-weight: 800; background: none !important; background-color: transparent !important;">vimedia.com.br</a>
                         </td>
                       </tr>
                     </table>
